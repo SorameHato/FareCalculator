@@ -27,6 +27,8 @@ for filename in LINE_FILES:
     with open(path.join('Table',filename), 'r', encoding='UTF8') as f:
         reader = csv.reader(f)
         line = filename[:-4] # 노선의 이름을 파일명에서 .csv를 제외한 부분으로 설정
+        # 추후 다음과 같이 수정
+        # line = LINE_FILES[filename]
         line_list[line] = dict()
         alias_list[line] = dict()
         for row in reader:
@@ -55,6 +57,13 @@ def stn_check(var, output:str):
             exit()
     else:
         return var
+'''
+추후 Table 폴더를 Table_Sion 폴더로 이동
+만약 없는 경우 Table_hanul, Table_Songwol, Table_ChionSion 폴더 등을 읽고
+거기에 역명이 있으면 여정 별 운임 부과 지역이라고 출력하고
+거기에도 없으면 없는 역이라고 출력
+평시에는 다른 폴더는 읽을 필요 없음
+'''
 
 # 출발역과 도착역을 입력받음
 departure = input("출발역: ")
