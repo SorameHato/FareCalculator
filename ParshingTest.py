@@ -9,6 +9,17 @@ LINE_FILES = [
     'RH15.csv'
 ]
 
+'''
+추후 다음과 같은 Dict (파일명;노선명) 형태로 변경
+LINE_FILES = {
+'RH1.csv' : '유하1호선',
+'RH2.csv' : '유하2호선',
+'WFEX.csv' : '서해환상선(쾌속)'
+'WFLC.csv' : '서해환상선(일반)'
+...
+}
+'''
+
 # 각 노선의 이름과 별칭을 저장하는 dict를 생성
 line_list = dict()
 alias_list = dict()
