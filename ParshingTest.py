@@ -20,8 +20,7 @@ for filename in LINE_FILES:
         alias_list[line] = dict()
         for row in reader:
             if len(row) == 1: # 거리밖에 없는 경우
-                dummyFileData = row # 오류가 있는 부분을 출력하기 위해 더미 변수를 생성
-                print(f'{line} 노선의 csv 파일에 문제가 있습니다. 문제가 있는 부분 : {dummyFileData}')
+                print(f'{line} 노선의 csv 파일에 문제가 있습니다. 문제가 있는 부분 : {row[0]}')
                 exit()
             elif len(row) == 2: # 별칭이 없는 경우
                 distance, station = row
